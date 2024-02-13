@@ -10,6 +10,10 @@ For free5gc's gtp5g kernel module to work you should use any distro with kernel 
 
 Download and install free5gc's gtp5g kernel module in the host and then use this Docker image.
 
+## Configure it
+
+Check documentation at [docs/configuration](docs/configuration.md)
+
 ## Build it (2 ways)
 
 ### First way (make + docker compose build)
