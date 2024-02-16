@@ -57,11 +57,7 @@ RUN wget --quiet https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}
 # add go binary to the executable PATH variable
 ENV PATH=$PATH:/usr/local/go/bin
 
-# copy helper_functions and entrypoint scripts
-COPY ./helper_functions.sh /PacketRusher/helper_functions.sh
-COPY ./entrypoint.sh /PacketRusher/entrypoint.sh
-
-ENTRYPOINT [ "/PacketRusher/entrypoint.sh" ]
+ENTRYPOINT [ "/PacketRusher/packetrusher" ]
 
 # use CMD to provide arguments to ENTRYPOINT (can be overridden by user)
 CMD [ "--config /PacketRusher/config/config.yml ue" ]

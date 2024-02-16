@@ -8,17 +8,6 @@ gnodeb:
     port: 38412
 ```
 
-Add the environment variable `USE_FQDNS=TRUE` in your Docker Compose file like:
-```yaml
-services:
-  ...
-  packetrusher:
-  ...
-    environment:
-      - USE_FQDNS=TRUE 
-  ...
-```
-
 Add your custom configuration file to the packetrusher container like:
 ```yaml
 services:
