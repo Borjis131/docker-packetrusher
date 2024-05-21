@@ -33,12 +33,8 @@ RUN git clone --depth 1 --branch=${PACKETRUSHER_VERSION} https://github.com/Hewl
 
 FROM ubuntu:${UBUNTU_VERSION}
 
-# target container architecture
-ARG TARGETARCH
-
 # build-time arguments
 ARG DEBIAN_FRONTEND="noninteractive"
-ARG YQ_VERSION="v4.30.6"
 
 # change working directory
 WORKDIR /PacketRusher
@@ -50,9 +46,6 @@ COPY --from=builder /usr/local/go /usr/local/go
 
 # install dependencies
 RUN apt-get update && apt-get install wget dnsutils iproute2 iperf3 iputils-ping curl -y
-
-# install yq
-RUN wget --quiet https://github.com/mikefarah/yq/releases/download/${YQ_VERSION}/yq_linux_${TARGETARCH} -O /usr/bin/yq && chmod +x /usr/bin/yq
 
 # add go binary to the executable PATH variable
 ENV PATH=$PATH:/usr/local/go/bin
