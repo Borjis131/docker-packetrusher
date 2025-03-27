@@ -10,6 +10,15 @@ For free5gc's gtp5g kernel module to work you should use any distro with kernel 
 
 Download and install free5gc's gtp5g kernel module in the host and then use this Docker image.
 
+### Pre-built images
+
+Pre-built images available on GitHub's Container Registry using the PacketRusher's project tags
+
+| Image name                                | gtp5g kernel module version |
+| ---                                       | ---                         |
+| ghcr.io/borjis131/packetrusher:20240521   | v0.8.6                      |
+| ghcr.io/borjis131/packetrusher:20250225   | v0.9.3                      |
+
 ## Configure it
 
 Check documentation at [docs/configuration](docs/configuration.md)
